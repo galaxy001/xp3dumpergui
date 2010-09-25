@@ -31,6 +31,7 @@ namespace Clowwindy.XP3Dumper.GUI
             dumper.SavePath = tbSavePath.Text;
             dumper.UseSoraApp = rbUseSoraApp.Checked;
             dumper.CodePage = tbCodePage.Text;
+            dumper.Delay = (int)numDelay.Value;
         }
 
         private string startDumper()
@@ -41,9 +42,17 @@ namespace Clowwindy.XP3Dumper.GUI
         private void btnStart_Click(object sender, EventArgs e)
         {
             initDumper();
+
+            btnStart.Enabled = false;
+            btnCancel.Enabled = true;
             var result = startDumper();
             lbStatus.Text = result;
-            btnFinish.Enabled = true;
+
+            result = dumper.WaitForFinish();
+            lbStatus.Text = result;
+            btnStart.Enabled = true;
+            btnCancel.Enabled = false;
+
             this.Activate();
             this.Focus();
         }
@@ -62,12 +71,14 @@ namespace Clowwindy.XP3Dumper.GUI
             tbCodePage.Enabled = !rbUseNone.Checked;
         }
 
-        private void btnFinish_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             if (dumper != null)
             {
-                var result = dumper.Finish();
+                var result = dumper.Cancel();
                 lbStatus.Text = result;
+                btnStart.Enabled = true;
+                btnCancel.Enabled = false;
             }
         }
 

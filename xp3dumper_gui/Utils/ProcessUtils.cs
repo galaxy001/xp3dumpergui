@@ -81,5 +81,10 @@ namespace Clowwindy.XP3Dumper.Utils
         {
             Thread.Sleep(interval);
         }
+
+        internal static void DoEvents()
+        {
+            System.Windows.Forms.Application.DoEvents();
+        }
     }
 }
