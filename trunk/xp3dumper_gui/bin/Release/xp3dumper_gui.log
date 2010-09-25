@@ -1,0 +1,27 @@
+2010-9-24 12:45:10
+System.IO.DirectoryNotFoundException: 未能找到路径“C:\games\あっぷりけ\黄昏のシンセfミア\!exporteraddr.tpm”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.Copy(String sourceFilename, String destFilename) 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Utils\FileUtils.cs:行号 23
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.copyExportPlugin() 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Controller\Xp3Dumper.cs:行号 170
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start() 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Controller\Xp3Dumper.cs:行号 107
+2010-9-24 12:47:01
+System.IO.DirectoryNotFoundException: 未能找到路径“C:\games\あっぷりけ\黄昏のシfンセミア\!exporteraddr.tpm”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.Copy(String sourceFilename, String destFilename) 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Utils\FileUtils.cs:行号 23
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.copyExportPlugin() 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Controller\Xp3Dumper.cs:行号 170
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start() 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Controller\Xp3Dumper.cs:行号 107
+
+2010-9-24 12:47:37
+System.ArgumentException: 路径的形式不合法。
+   在 System.IO.Path.NormalizePathFast(String path, Boolean fullCheck)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck)
+   在 System.IO.Path.GetFullPathInternal(String path)
+   在 System.IO.Directory.CreateDirectory(String path, DirectorySecurity directorySecurity)
+   在 System.IO.Directory.CreateDirectory(String path)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.MakeDir(String dir) 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Utils\FileUtils.cs:行号 17
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start() 位置 C:\workspace\xp3dumper_gui\xp3dumper_gui\Controller\Xp3Dumper.cs:行号 123
+
