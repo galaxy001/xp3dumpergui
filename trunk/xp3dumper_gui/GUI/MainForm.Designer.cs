@@ -52,7 +52,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbStatus = new System.Windows.Forms.Label();
-            this.btnFinish = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numDelay)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -225,12 +225,12 @@
             resources.ApplyResources(this.lbStatus, "lbStatus");
             this.lbStatus.Name = "lbStatus";
             // 
-            // btnFinish
+            // btnCancel
             // 
-            resources.ApplyResources(this.btnFinish, "btnFinish");
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.UseVisualStyleBackColor = true;
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // MainForm
             // 
@@ -239,7 +239,7 @@
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnFinish);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnStart);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -281,6 +281,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbStatus;
-        private System.Windows.Forms.Button btnFinish;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

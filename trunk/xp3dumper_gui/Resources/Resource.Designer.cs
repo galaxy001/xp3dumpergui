@@ -61,7 +61,16 @@ namespace Clowwindy.XP3Dumper.Resources {
         }
         
         /// <summary>
-        ///   查找类似 已清理。 的本地化字符串。
+        ///   查找类似 已取消。 的本地化字符串。
+        /// </summary>
+        internal static string Canceled {
+            get {
+                return ResourceManager.GetString("Canceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 提取完成。 的本地化字符串。
         /// </summary>
         internal static string Finished {
             get {
@@ -88,7 +97,7 @@ namespace Clowwindy.XP3Dumper.Resources {
         }
         
         /// <summary>
-        ///   查找类似 已开始提取，目前不支持检测提取是否结束，请检查保存目录。提取结束后请点击清理按钮清理临时文件。 的本地化字符串。
+        ///   查找类似 正在提取中，请稍候。 的本地化字符串。
         /// </summary>
         internal static string Started {
             get {

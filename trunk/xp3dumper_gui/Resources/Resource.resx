@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Canceled" xml:space="preserve">
+    <value>已取消。</value>
+  </data>
   <data name="Finished" xml:space="preserve">
-    <value>已清理。</value>
+    <value>提取完成。</value>
   </data>
   <data name="SeeLog" xml:space="preserve">
     <value>请检查日志文件。</value>
@@ -127,6 +130,6 @@
     <value>未找到SoraApp。</value>
   </data>
   <data name="Started" xml:space="preserve">
-    <value>已开始提取，目前不支持检测提取是否结束，请检查保存目录。提取结束后请点击清理按钮清理临时文件。</value>
+    <value>正在提取中，请稍候。</value>
   </data>
 </root>

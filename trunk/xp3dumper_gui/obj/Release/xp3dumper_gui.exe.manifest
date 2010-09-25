@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity version="1.0.0.1" name="xp3dumper_gui.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="xp3dumper_gui" version="0.1.3919.36369" publicKeyToken="BD790BD3032D7425" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="xp3dumper_gui" version="0.2.3921.1468" publicKeyToken="BD790BD3032D7425" language="neutral" processorArchitecture="msil" />
     <commandLine file="xp3dumper_gui.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -41,24 +41,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="xp3dumper_gui.exe" size="44544">
-      <assemblyIdentity name="xp3dumper_gui" version="0.1.3919.36369" publicKeyToken="BD790BD3032D7425" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="xp3dumper_gui.exe" size="45056">
+      <assemblyIdentity name="xp3dumper_gui" version="0.2.3921.1468" publicKeyToken="BD790BD3032D7425" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Iioi/gM2n26vAiMydJXY+PcevVI=</dsig:DigestValue>
+        <dsig:DigestValue>5p8fRlX/1eeIoZ0BCqORnprpz2w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Readme.txt" size="1294">
+  <file name="Readme.txt" size="1254">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>B00KLrJCmNmHGsCJbAKHIn+nfOc=</dsig:DigestValue>
+      <dsig:DigestValue>P7nE7DX2zHoIfKjq/b+YY7M3BbM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="xp3dumper\helpers\DllLoader.exe" size="45056">

@@ -12,7 +12,7 @@ namespace Clowwindy.XP3Dumper.Controller
         private const string EXPORTER_FULL_FILENAME = XP3HELPERS_PATH + EXPORTER_FILENAME;
 
         private const string XP3DUMPER_PATH = @"xp3dumper\xp3dumper\";
-        private const string DUMPER_FILENAME = @"~xp3dumper0.12b.tpm";
+        private const string DUMPER_FILENAME = @"~xp3dumper0.12d.tpm";
         private const string DUMPER_FULL_FILENAME = XP3DUMPER_PATH + DUMPER_FILENAME;
 
         private const string ARC_LIST_FILENAME = "arc_list.txt";
@@ -29,13 +29,16 @@ namespace Clowwindy.XP3Dumper.Controller
 
         private const string DUMPER_EDIT_ADDRESS_CLASS = "EDIT";
 
-        private const string DUMPER_WINDOW_TITLE = "xp3dumper 0.12b";
+        private const string DUMPER_WINDOW_TITLE = "xp3dumper 0.12d";
+        private const string DUMPER_FINISHED_WINDOW_TITLE = "xp3dumper hint";
 
-        private const int WAIT_SLEEP_INTERVAL = 20;
+        private const int WAIT_SLEEP_INTERVAL = 40;
 
         private string address;
 
         private string bootFilename;
+
+        private bool finished = true;
 
         internal Xp3Dumper()
         {
@@ -105,6 +108,8 @@ namespace Clowwindy.XP3Dumper.Controller
         {
             try
             {
+                finished = false;
+
                 //获取导出地址
                 killGame();
                 delDumperPlugin();
@@ -136,6 +141,23 @@ namespace Clowwindy.XP3Dumper.Controller
             }
         }
 
+        internal string WaitForFinish()
+        {
+            try
+            {
+                waitUtilTrue(dumpFinished, null);
+
+                Finish();
+            }
+            catch (Exception e)
+            {
+                LogUtils.Log(e.ToString());
+                return e.Message + " " + Resource.SeeLog;
+            }
+            return Resource.Finished;
+        }
+
+
         internal string Finish()
         {
             try
@@ -144,7 +166,26 @@ namespace Clowwindy.XP3Dumper.Controller
                 delDumperPlugin();
                 delExportPlugin();
                 delAddressFile();
+                finished = true;
                 return Resource.Finished;
+            }
+            catch (Exception e)
+            {
+                LogUtils.Log(e.ToString());
+                return e.Message + " " + Resource.SeeLog;
+            }
+        }
+
+        internal string Cancel()
+        {
+            try
+            {
+                killGame();
+                delDumperPlugin();
+                delExportPlugin();
+                delAddressFile();
+                finished = true;
+                return Resource.Canceled;
             }
             catch (Exception e)
             {
@@ -249,19 +290,32 @@ namespace Clowwindy.XP3Dumper.Controller
             return true;
         }
 
+        protected bool dumpFinished(string notUsed)
+        {
+            IntPtr hwndWin = ProcessUtils.FindWindow(null, DUMPER_FINISHED_WINDOW_TITLE);
+            if (hwndWin.ToInt32() == 0)
+            {
+                return false;
+            }
+            return true;
+
+        }
+
         protected delegate bool StringToBoolMethod(string argument);
         protected void waitUtilTrue(StringToBoolMethod condition, string argument)
         {
-            while (!condition(argument))
+            while (!condition(argument) && !finished)
             {
                 ProcessUtils.Sleep(WAIT_SLEEP_INTERVAL);
+                ProcessUtils.DoEvents();
             }
         }
         protected void waitUtilFalse(StringToBoolMethod condition, string argument)
         {
-            while (condition(argument))
+            while (condition(argument) && !finished)
             {
                 ProcessUtils.Sleep(WAIT_SLEEP_INTERVAL);
+                ProcessUtils.DoEvents();
             }
         }
 

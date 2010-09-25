@@ -111,10 +111,7 @@
     <None Include="xp3dumper\helpers\~~fpng.tpm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="xp3dumper\xp3dumper\~xp3dumper0.11.tpm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="xp3dumper\xp3dumper\~xp3dumper0.12b.tpm">
+    <None Include="xp3dumper\xp3dumper\~xp3dumper0.12d.tpm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="xp3dumper\xp3maker\~xp3maker.tpm">
