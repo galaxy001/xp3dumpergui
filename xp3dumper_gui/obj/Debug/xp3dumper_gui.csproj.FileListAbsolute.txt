@@ -29,3 +29,39 @@ C:\workspace\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.exe.manifest
 C:\workspace\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.application
 C:\workspace\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.exe
 C:\workspace\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.pdb
+D:\Desktop\xp3dumper_gui - 副本\xp3dumper_gui\bin\Debug\xp3dumper_gui.exe.config
+D:\Desktop\xp3dumper_gui - 副本\xp3dumper_gui\obj\Debug\xp3dumper_gui.exe
+D:\Desktop\xp3dumper_gui - 副本\xp3dumper_gui\obj\Debug\xp3dumper_gui.pdb
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper_gui.exe.config
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.exe
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.pdb
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\Readme.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\DllLoader.exe
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\dumperHelper.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\pic_path.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\readme.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\xp3dumper\history.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\xp3dumper\xp3dumper.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\xp3maker\history.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\xp3maker\xp3enc.dll
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\xp3maker\xp3maker.txt
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\!dumpHelper.tpm
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\!exporteraddr.tpm
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\xp3dumper.helper.dat
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\~layerExSave.tpm
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\helpers\~~fpng.tpm
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\xp3dumper\~xp3dumper0.12d.tpm
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper\xp3maker\~xp3maker.tpm
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper_gui.exe.manifest
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper_gui.application
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper_gui.exe
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\bin\Debug\xp3dumper_gui.pdb
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\Clowwindy.XP3Dumper.GUI.MainForm.resources
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\Clowwindy.XP3Dumper.Properties.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\Clowwindy.XP3Dumper.Resources.Resource.resources
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\ResGen.read.1.tlog
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\ResGen.write.1.tlog
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.TrustInfo.xml
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.exe.manifest
+D:\Documents\Visual Studio 2010\Projects\xp3dumper_gui\xp3dumper_gui\obj\Debug\xp3dumper_gui.application

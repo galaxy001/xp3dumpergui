@@ -123,11 +123,11 @@
   <data name="Finished" xml:space="preserve">
     <value>提取完成。</value>
   </data>
+  <data name="LoaderNotFound" xml:space="preserve">
+    <value>未找到相应启动载入工具。</value>
+  </data>
   <data name="SeeLog" xml:space="preserve">
     <value>请检查日志文件。</value>
-  </data>
-  <data name="SoraAppNotFound" xml:space="preserve">
-    <value>未找到SoraApp。</value>
   </data>
   <data name="Started" xml:space="preserve">
     <value>正在提取中，请稍候。</value>

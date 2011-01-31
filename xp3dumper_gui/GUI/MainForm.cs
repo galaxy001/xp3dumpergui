@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using Clowwindy.XP3Dumper.Controller;
-using System.Reflection;
 using Clowwindy.XP3Dumper.Utils;
 
 namespace Clowwindy.XP3Dumper.GUI
@@ -29,9 +30,15 @@ namespace Clowwindy.XP3Dumper.GUI
             dumper.ExecuteFilename = tbExcuteFilename.Text;
             dumper.Xp3Filename = tbXp3Filename.Text;
             dumper.SavePath = tbSavePath.Text;
-            dumper.UseSoraApp = rbUseSoraApp.Checked;
             dumper.CodePage = tbCodePage.Text;
             dumper.Delay = (int)numDelay.Value;
+
+            if (rbUseSoraApp.Checked)
+                dumper.UseLoader = Xp3Dumper.UseStartLoader.SoraApp;
+            else if (rbUseNTLEA.Checked)
+                dumper.UseLoader = Xp3Dumper.UseStartLoader.NTLEA;
+            else
+                dumper.UseLoader = Xp3Dumper.UseStartLoader.None;
         }
 
         private string startDumper()
@@ -59,11 +66,26 @@ namespace Clowwindy.XP3Dumper.GUI
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            FlushConfigFile();
+
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             this.Text += String.Format(" {0}.{1}", version.Major, version.Minor);
             openDialog = new OpenFileDialog();
             openDialog.RestoreDirectory = true;
             folderDialog = new FolderBrowserDialog();
+
+            tbNTLEAPath.Text = Properties.Settings.Default.NTLEAPath;
+        }
+
+        private void FlushConfigFile()
+        {
+            string configFileName = System.Windows.Forms.Application.ExecutablePath + ".config";
+            if (!File.Exists(configFileName))
+            {
+                StreamWriter bw = new StreamWriter(new FileStream(configFileName, FileMode.Create), System.Text.Encoding.UTF8);
+                bw.Write(Properties.Resources.app_config);
+                bw.Close();
+            }
         }
 
         private void rbUseNone_CheckedChanged(object sender, EventArgs e)
@@ -85,6 +107,7 @@ namespace Clowwindy.XP3Dumper.GUI
         private void btnBootFilename_Click(object sender, EventArgs e)
         {
             openDialog.FileName = tbBootFilename.Text;
+            openDialog.Filter = "*.exe|*.exe|*.*|*.*";
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
                 tbBootFilename.Text = openDialog.FileName;
@@ -102,6 +125,7 @@ namespace Clowwindy.XP3Dumper.GUI
         private void btnExcuteFilename_Click(object sender, EventArgs e)
         {
             openDialog.FileName = tbBootFilename.Text;
+            openDialog.Filter = "*.exe|*.exe|*.*|*.*";
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
                 tbExcuteFilename.Text = FileUtils.GetFileName(openDialog.FileName);
@@ -111,6 +135,7 @@ namespace Clowwindy.XP3Dumper.GUI
         private void btnExtractFilename_Click(object sender, EventArgs e)
         {
             openDialog.FileName = tbBootFilename.Text;
+            openDialog.Filter = "*.xp3|*.xp3|*.*|*.*";
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
                 tbXp3Filename.Text = FileUtils.GetFileName(openDialog.FileName);
@@ -124,6 +149,21 @@ namespace Clowwindy.XP3Dumper.GUI
             {
                 tbSavePath.Text = folderDialog.SelectedPath;
             }
+        }
+
+        private void buttonNTLEA_Click(object sender, EventArgs e)
+        {
+            openDialog.FileName = tbNTLEAPath.Text;
+            openDialog.Filter = "ntleac.exe|ntleac.exe";
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                tbNTLEAPath.Text = openDialog.FileName;
+            }
+        }
+
+        private void tbNTLEAPath_TextChanged(object sender, EventArgs e)
+        {
+            SettingUtils.Change("NTLEAPath", tbNTLEAPath.Text);
         }
     }
 }

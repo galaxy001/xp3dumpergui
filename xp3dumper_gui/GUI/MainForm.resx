@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 17</value>
+    <value>6, 25</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>287, 12</value>
@@ -150,7 +150,7 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 56</value>
+    <value>6, 64</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 12</value>
@@ -174,7 +174,7 @@
     <value>1</value>
   </data>
   <data name="tbBootFilename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 32</value>
+    <value>4, 40</value>
   </data>
   <data name="tbBootFilename.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 21</value>
@@ -195,7 +195,7 @@
     <value>2</value>
   </data>
   <data name="tbExcuteFilename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 71</value>
+    <value>4, 79</value>
   </data>
   <data name="tbExcuteFilename.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 21</value>
@@ -216,7 +216,7 @@
     <value>3</value>
   </data>
   <data name="tbXp3Filename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 110</value>
+    <value>4, 118</value>
   </data>
   <data name="tbXp3Filename.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 21</value>
@@ -240,16 +240,16 @@
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 95</value>
+    <value>6, 103</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 12</value>
+    <value>299, 12</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>要解包的xp3文件（不含路径）：</value>
+    <value>目标xp3文件（不含路径，多个包可用半角逗号分隔）：</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -264,7 +264,7 @@
     <value>5</value>
   </data>
   <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 219</value>
+    <value>364, 239</value>
   </data>
   <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -291,7 +291,7 @@
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 138</value>
+    <value>6, 143</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 12</value>
@@ -315,7 +315,7 @@
     <value>7</value>
   </data>
   <data name="tbSavePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 152</value>
+    <value>4, 160</value>
   </data>
   <data name="tbSavePath.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 21</value>
@@ -360,25 +360,22 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;rbUseSoraApp.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="rbUseNTLEA.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="rbUseNTLEA.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="rbUseNTLEA.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 43</value>
   </data>
   <data name="rbUseNTLEA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 16</value>
+    <value>77, 16</value>
   </data>
   <data name="rbUseNTLEA.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="rbUseNTLEA.Text" xml:space="preserve">
-    <value>使用NTLEA（暂不支持）</value>
+    <value>使用NTLEA</value>
   </data>
   <data name="&gt;&gt;rbUseNTLEA.Name" xml:space="preserve">
     <value>rbUseNTLEA</value>
@@ -390,13 +387,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;rbUseNTLEA.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="rbUseNone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="rbUseNone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 66</value>
+    <value>13, 93</value>
   </data>
   <data name="rbUseNone.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 16</value>
@@ -417,10 +414,10 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;rbUseNone.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="btnBootFilename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 32</value>
+    <value>230, 40</value>
   </data>
   <data name="btnBootFilename.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -444,7 +441,7 @@
     <value>11</value>
   </data>
   <data name="btnExcuteFilename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 69</value>
+    <value>230, 77</value>
   </data>
   <data name="btnExcuteFilename.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -468,7 +465,7 @@
     <value>10</value>
   </data>
   <data name="btnExtractFilename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 108</value>
+    <value>230, 116</value>
   </data>
   <data name="btnExtractFilename.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -492,7 +489,7 @@
     <value>8</value>
   </data>
   <data name="btnSavePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 150</value>
+    <value>230, 158</value>
   </data>
   <data name="btnSavePath.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -516,7 +513,7 @@
     <value>6</value>
   </data>
   <data name="numDelay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 153</value>
+    <value>14, 174</value>
   </data>
   <data name="numDelay.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 21</value>
@@ -534,13 +531,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;numDelay.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 138</value>
+    <value>12, 159</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 12</value>
@@ -561,13 +558,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 95</value>
+    <value>12, 116</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
@@ -588,13 +585,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="tbCodePage.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="tbCodePage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 110</value>
+    <value>13, 131</value>
   </data>
   <data name="tbCodePage.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 21</value>
@@ -615,13 +612,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;tbCodePage.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 190</value>
+    <value>319, 205</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -638,11 +635,56 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="tbNTLEAPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 66</value>
+  </data>
+  <data name="tbNTLEAPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 21</value>
+  </data>
+  <data name="tbNTLEAPath.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;tbNTLEAPath.Name" xml:space="preserve">
+    <value>tbNTLEAPath</value>
+  </data>
+  <data name="&gt;&gt;tbNTLEAPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbNTLEAPath.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;tbNTLEAPath.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonNTLEA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 40</value>
+  </data>
+  <data name="buttonNTLEA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 23</value>
+  </data>
+  <data name="buttonNTLEA.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="buttonNTLEA.Text" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="&gt;&gt;buttonNTLEA.Name" xml:space="preserve">
+    <value>buttonNTLEA</value>
+  </data>
+  <data name="&gt;&gt;buttonNTLEA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonNTLEA.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;buttonNTLEA.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>351, 12</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 190</value>
+    <value>174, 205</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -660,7 +702,7 @@
     <value>1</value>
   </data>
   <data name="lbStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 224</value>
+    <value>12, 232</value>
   </data>
   <data name="lbStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 36</value>
@@ -687,7 +729,7 @@
     <value>False</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 219</value>
+    <value>445, 239</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -720,7 +762,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>537, 266</value>
+    <value>537, 278</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
