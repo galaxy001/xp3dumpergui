@@ -1,7 +1,7 @@
 ﻿using System;
-using Clowwindy.XP3Dumper.Utils;
-using Clowwindy.XP3Dumper.Resources;
 using System.IO;
+using Clowwindy.XP3Dumper.Resources;
+using Clowwindy.XP3Dumper.Utils;
 
 namespace Clowwindy.XP3Dumper.Controller
 {
@@ -20,6 +20,7 @@ namespace Clowwindy.XP3Dumper.Controller
         private const string DLLLOADER_FULL_FILENAME = XP3HELPERS_PATH + "DllLoader.exe";
 
         private const string SORAAPP_FILENAME = @"\SoraApp\SoraApp.exe";
+        private string NTLEA_PATH = @"D:\Program Files (x86)\NTLEA\ntleac.exe";
 
         private const string DUMPER_BUTTON_CLASS = "Button";
         private const string DUMPER_BUTTON_TITLE = "模式3启动";
@@ -40,9 +41,16 @@ namespace Clowwindy.XP3Dumper.Controller
 
         private bool finished = true;
 
+        internal enum UseStartLoader
+        {
+            None,
+            SoraApp,
+            NTLEA
+        }
+
         internal Xp3Dumper()
         {
-            useSoraApp = false;
+            useLoader = UseStartLoader.None;
             delay = 4;
             codePage = "0411";
         }
@@ -52,6 +60,7 @@ namespace Clowwindy.XP3Dumper.Controller
             get { return bootFilename; }
             set { bootFilename = value; }
         }
+
         private string executeFilename;
 
         internal string ExecuteFilename
@@ -59,6 +68,7 @@ namespace Clowwindy.XP3Dumper.Controller
             get { return executeFilename; }
             set { executeFilename = value; }
         }
+
         private string xp3Filename;
 
         internal string Xp3Filename
@@ -66,6 +76,7 @@ namespace Clowwindy.XP3Dumper.Controller
             get { return xp3Filename; }
             set { xp3Filename = value; }
         }
+
         private string savePath;
 
         internal string SavePath
@@ -74,19 +85,24 @@ namespace Clowwindy.XP3Dumper.Controller
             set { savePath = value; }
         }
 
+        internal string NTLEAPath
+        {
+            get { return NTLEA_PATH; }
+            set { NTLEA_PATH = value; }
+        }
+
         private string getGamePath()
         {
             return FileUtils.GetDirectoryName(bootFilename);
         }
 
-        private bool useSoraApp;
+        private UseStartLoader useLoader;
 
-        internal bool UseSoraApp
+        internal UseStartLoader UseLoader
         {
-            get { return useSoraApp; }
-            set { useSoraApp = value; }
+            get { return useLoader; }
+            set { useLoader = value; }
         }
-
 
         private int delay;
 
@@ -157,7 +173,6 @@ namespace Clowwindy.XP3Dumper.Controller
             return Resource.Finished;
         }
 
-
         internal string Finish()
         {
             try
@@ -196,21 +211,27 @@ namespace Clowwindy.XP3Dumper.Controller
 
         protected void startGame()
         {
-            if (useSoraApp)
+            try
             {
-                try
+                if (useLoader == UseStartLoader.SoraApp)
                 {
                     ProcessUtils.StartProcess(FileUtils.GetWinDir() + SORAAPP_FILENAME, codePage.Trim() + " " + this.bootFilename);
                 }
-                catch (FileNotFoundException e)
+                else if (useLoader == UseStartLoader.NTLEA)
                 {
-                    throw new ArgumentException(Resource.SoraAppNotFound, e);
+                    int iLCID = Convert.ToInt32(codePage.Trim(), 16);
+                    ProcessUtils.StartProcess(NTLEA_PATH, String.Format("\"{0}\" C{1} L{2}", this.bootFilename, Win32APIUtils.GetLocaleCP(iLCID), iLCID));
+                }
+                else
+                {
+                    ProcessUtils.StartProcess(this.bootFilename, null);
                 }
             }
-            else
+            catch (FileNotFoundException e)
             {
-                ProcessUtils.StartProcess(this.bootFilename, null);
+                throw new ArgumentException(Resource.LoaderNotFound, e);
             }
+
             waitUtilTrue(ProcessUtils.ExistsProcess, this.executeFilename);
         }
 
@@ -224,7 +245,6 @@ namespace Clowwindy.XP3Dumper.Controller
             ProcessUtils.Kill(this.executeFilename);
             waitUtilFalse(ProcessUtils.ExistsProcess, this.executeFilename);
         }
-
 
         protected void copyExportPlugin()
         {
@@ -264,19 +284,18 @@ namespace Clowwindy.XP3Dumper.Controller
 
         protected void createArcList()
         {
-            FileUtils.WriteTextFile(FileUtils.CombinePath(getGamePath(), ARC_LIST_FILENAME), this.xp3Filename);
+            FileUtils.WriteTextFile(FileUtils.CombinePath(getGamePath(), ARC_LIST_FILENAME), this.xp3Filename.Replace(",", "\r\n"));
         }
 
         protected bool setWindowTextThenClickButton(String notUsed)
         {
-
             IntPtr hwndWin;
             IntPtr hwndButton;
             IntPtr hwndEditPath;
             IntPtr hwndEditAddress;
 
             hwndWin = ProcessUtils.FindWindow(null, DUMPER_WINDOW_TITLE);
-            if (hwndWin.ToInt32()==0)
+            if (hwndWin.ToInt32() == 0)
             {
                 return false;
             }
@@ -298,10 +317,10 @@ namespace Clowwindy.XP3Dumper.Controller
                 return false;
             }
             return true;
-
         }
 
         protected delegate bool StringToBoolMethod(string argument);
+
         protected void waitUtilTrue(StringToBoolMethod condition, string argument)
         {
             while (!condition(argument) && !finished)
@@ -310,6 +329,7 @@ namespace Clowwindy.XP3Dumper.Controller
                 ProcessUtils.DoEvents();
             }
         }
+
         protected void waitUtilFalse(StringToBoolMethod condition, string argument)
         {
             while (condition(argument) && !finished)
@@ -318,6 +338,5 @@ namespace Clowwindy.XP3Dumper.Controller
                 ProcessUtils.DoEvents();
             }
         }
-
     }
 }

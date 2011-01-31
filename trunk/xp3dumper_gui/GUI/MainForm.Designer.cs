@@ -51,6 +51,8 @@
             this.tbCodePage = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbNTLEAPath = new System.Windows.Forms.TextBox();
+            this.buttonNTLEA = new System.Windows.Forms.Button();
             this.lbStatus = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numDelay)).BeginInit();
@@ -209,6 +211,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tbNTLEAPath);
+            this.groupBox2.Controls.Add(this.buttonNTLEA);
             this.groupBox2.Controls.Add(this.rbUseSoraApp);
             this.groupBox2.Controls.Add(this.rbUseNTLEA);
             this.groupBox2.Controls.Add(this.tbCodePage);
@@ -219,6 +223,19 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // tbNTLEAPath
+            // 
+            resources.ApplyResources(this.tbNTLEAPath, "tbNTLEAPath");
+            this.tbNTLEAPath.Name = "tbNTLEAPath";
+            this.tbNTLEAPath.TextChanged += new System.EventHandler(this.tbNTLEAPath_TextChanged);
+            // 
+            // buttonNTLEA
+            // 
+            resources.ApplyResources(this.buttonNTLEA, "buttonNTLEA");
+            this.buttonNTLEA.Name = "buttonNTLEA";
+            this.buttonNTLEA.UseVisualStyleBackColor = true;
+            this.buttonNTLEA.Click += new System.EventHandler(this.buttonNTLEA_Click);
             // 
             // lbStatus
             // 
@@ -282,5 +299,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button buttonNTLEA;
+        private System.Windows.Forms.TextBox tbNTLEAPath;
     }
 }
