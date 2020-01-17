@@ -118,18 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Canceled" xml:space="preserve">
-    <value>已取消。</value>
+    <value>canseled</value>
   </data>
   <data name="Finished" xml:space="preserve">
-    <value>提取完成。</value>
+    <value>finished</value>
   </data>
   <data name="LoaderNotFound" xml:space="preserve">
-    <value>未找到相应启动载入工具。</value>
+    <value>LoaderNotFound</value>
   </data>
   <data name="SeeLog" xml:space="preserve">
-    <value>请检查日志文件。</value>
+    <value>ログファイルを確認してください</value>
   </data>
   <data name="Started" xml:space="preserve">
-    <value>正在提取中，请稍候。</value>
+    <value>unpackが進行している間お待ちください。</value>
   </data>
 </root>
