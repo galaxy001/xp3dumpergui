@@ -10,7 +10,7 @@
     </UpdateUrlHistory>
     <BootstrapperUrlHistory>
     </BootstrapperUrlHistory>
-    <FallbackCulture>zh-CN</FallbackCulture>
+    <FallbackCulture>ja-JP</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
     <ErrorReportUrlHistory />
   </PropertyGroup>

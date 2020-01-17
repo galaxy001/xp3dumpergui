@@ -8,7 +8,7 @@ namespace xp3dumper_gui
     internal static class Program
     {
         /// <summary>
-        /// 应用程序的主入口点。
+        /// アプリケーションのメインエントリポイント。
         /// </summary>
         [STAThread]
         static void Main()
