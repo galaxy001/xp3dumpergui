@@ -1,4 +1,4 @@
-﻿XP3 Dumper GUI
+﻿XP3 Dumper GUI(翻訳版)
 本程序是对Resty做的xp3dumper等一系列xp3提取工具的GUI封装，提供简单的GUI调用功能。这些工具在xp3dumper目录中。
 
 Ver 0.3 新增功能说明：
@@ -29,3 +29,5 @@ History:
 	0.3 新增 NTLEA 支持，支持同时提取多个封包
 	0.2 在xp3dumper0.12d的基础上，实现判断提取结束功能
 	0.1 第一个公开版本
+
+build: vscode2017 with windows10で出来た。
